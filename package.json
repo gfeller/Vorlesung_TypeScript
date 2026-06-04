@@ -1,0 +1,15 @@
+{
+  "name": "vorlesung_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Michael Gfeller",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
