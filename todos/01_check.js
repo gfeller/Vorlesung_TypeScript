@@ -1,6 +1,5 @@
-//const message = "hallo!";
-//message();
-var user = {
+"use strict";
+const user = {
     name: "Daniel",
     age: 26,
 };

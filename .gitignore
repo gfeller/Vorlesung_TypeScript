@@ -5,7 +5,7 @@ node_modules/
 dist/
 build/
 out/
-*.js.map
+*.js.map    
 *.d.ts
 
 # TypeScript cache
@@ -27,6 +27,7 @@ Thumbs.db
 
 # Editor directories
 .vscode/
+!.vscode/launch.json
 .idea/
 *.suo
 *.ntvs*
