@@ -1,4 +1,4 @@
-import { getUserById } from './api'
+import { getUserById } from './02_api.js'
 getUserById(1);
 
 
