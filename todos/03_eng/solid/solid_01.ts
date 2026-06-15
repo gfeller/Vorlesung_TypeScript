@@ -14,7 +14,7 @@ class Person {
     }
 
     public greet(): void {
-        alert(`Hi! I'm ${this.name}. You can reach me at ${this.email}`);
+        console.log(`Hi! I'm ${this.name}. You can reach me at ${this.email}`);
     }
 
     private validateEmail(email: string): boolean {

@@ -1,4 +1,3 @@
-
 class Bird {
     public fly(): void {
         console.log('I am flying!');

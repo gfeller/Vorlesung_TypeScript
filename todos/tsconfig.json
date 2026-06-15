@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    // Output
+    "outDir": "./dist",                          // Compiled JS output directory
+    "rootDir": ".",                              // Root of the source files — mirrors structure into outDir
+
+
+    // Environment Settings
+    "target": "ES2022",                          // Emit modern JS — no unnecessary downleveling for Node 18+
+    "lib": ["ES2022"],                           // Type definitions matching the target runtime
+    "module": "nodenext",                        // Node.js ESM/CJS module system (respects .mjs/.cjs and package.json "type")
+    "moduleResolution": "nodenext",              // Pairs with "nodenext" module — resolves imports the way Node actually does
+    "types": ["node"],                           // Only pull in @types/node globally; nothing else leaks in
+
+    // Stricter Type Checking
+    "strict": true,                              // Umbrella flag: strictNullChecks, noImplicitAny, strictFunctionTypes, etc.
+    "noUncheckedIndexedAccess": true,            // arr[0] is T | undefined, not T — forces you to handle missing elements
+    "exactOptionalPropertyTypes": true,          // { x?: string } won't accept { x: undefined } — absent means absent
+    "noImplicitOverride": true,                  // Must use `override` keyword when overriding class methods
+    "noPropertyAccessFromIndexSignature": true,  // Forces bracket notation for index-sig types: obj["key"] not obj.key
+    "noFallthroughCasesInSwitch": true,          // Switch cases must have break/return — no silent fallthrough
+    "noUnusedLocals": true,                      // Error on declared but unused local variables
+    "noUnusedParameters": true,                  // Error on declared but unused function parameters
+
+    // Module Hygiene
+    "verbatimModuleSyntax": true,                // Enforces `import type` for type-only imports — no accidental runtime imports
+    "isolatedModules": true,                     // Each file must be safely transpilable in isolation (esbuild/SWC/Babel safe)
+    "moduleDetection": "force",                  // Every file is a module — never accidentally a global script
+    "noUncheckedSideEffectImports": true,        // Errors on bare `import "./foo"` if the file can't be resolved
+    "forceConsistentCasingInFileNames": true,    // Prevents import casing bugs (macOS is lenient, Linux CI is not)
+
+    // Source Maps & Declarations
+    "sourceMap": true,                           // Emit .js.map so debuggers map back to original .ts source
+    "declaration": true,                         // Emit .d.ts files — required if publishing a library
+    "declarationMap": true,                      // Emit .d.ts.map so "Go to Definition" jumps to .ts not .d.ts
+
+     // Misc
+    "skipLibCheck": true                         // Skip type-checking node_modules .d.ts files — faster builds, avoids third-party type bugs
+  }
+}
