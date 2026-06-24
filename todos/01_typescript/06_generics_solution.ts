@@ -44,7 +44,7 @@ function avgWithKey<T>(array: T[], key: NumericKeys<T>): number {
 console.log(avgWithKey(items, "amount"))
 
 // task 3 - filter:
-function filterByProperty(array: any[], key: any, value: any): any {
+function filterByProperty<T, K extends keyof T>(array: T[], key: K, value: T[K]): any {
     return array.filter(item => item[key] === value);
 }
 
