@@ -11,7 +11,7 @@ const logFns = {
     [LogLevel.Info]: console.info,
 }
 
-function log(message: string, options: { logLevel: LogLevel }) {
+function log(message:   string, options: { logLevel: LogLevel }) {
     logFns[options.logLevel]()
 }
 

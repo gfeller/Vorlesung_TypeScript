@@ -1,4 +1,4 @@
-type DiscountType = 'student' | 'senior' | 'employee';
+type DiscountType = 'student' | 'senior' | 'employee' | 'employee';
 
 class DiscountCalculator {
     public calculate(price: number, discountType: DiscountType): number {

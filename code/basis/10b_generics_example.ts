@@ -1,6 +1,6 @@
 type ID = number;
 
-class BaseClass<T extends { id: ID }> {
+class BaseStore<T extends { id: ID }> {
     storage: Record<ID, T> = {}; // Datenspeicher mit KEY - VALUE
 
     add(item: T) {
@@ -28,8 +28,8 @@ class BaseClass<T extends { id: ID }> {
 }
 
 
-class TodoStore extends BaseClass<{ id: ID, title: string }> { }
-class PersonStore extends BaseClass<{ id: ID, name: string }> { }
+class TodoStore extends BaseStore<{ id: ID, title: string }> { }
+class PersonStore extends BaseStore<{ id: ID, name: string }> { }
 
 const todoStore = new TodoStore()
 todoStore.add({ id: 1, title: 'Generics lernen' })
