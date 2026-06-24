@@ -20,6 +20,6 @@ class Person {
     private validateEmail(email: string): boolean {
         const re = /\S+@\S+\.\S+/;
 
-        return re.test(this.email);
+        return re.test(email);
     }
 }
