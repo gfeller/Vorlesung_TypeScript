@@ -26,8 +26,6 @@ npm-debug.log*
 Thumbs.db
 
 # Editor directories
-.vscode/
-!.vscode/launch.json
 .idea/
 *.suo
 *.ntvs*

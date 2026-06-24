@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "tsc: typecheck",
+            "type": "shell",
+            "command": "npx tsc --noEmit \"${file}\"",
+            "problemMatcher": "$tsc",
+            "group": "build"
+        }
+    ]
+}
